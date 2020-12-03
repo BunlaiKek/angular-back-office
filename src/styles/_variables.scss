@@ -1,0 +1,10 @@
+// color block
+$defaultBgColor: #F6F6FE;
+$defaultMenuBgColor: #FFFFFF;
+
+
+
+// layout dimension block
+$defaultMenuWidth: 270px;
+$defaultMainContainerWidth: calc(100% - #{$defaultMenuWidth});
+$logoBoxHeight: 150px;

@@ -1,0 +1,21 @@
+@import '../../../styles/variables';
+
+.menu-container {
+    width: $defaultMenuWidth;
+    height: 100%;
+    float: left;
+    background-color: $defaultMenuBgColor;
+    position: relative;
+
+    .logo-box {
+        width: 100%;
+        height: $logoBoxHeight;
+        position: relative;
+    }
+
+    .menu-item-container {
+        width: 100%;
+        height: calc(100% - #{$logoBoxHeight});
+        position: relative;
+    }
+}
