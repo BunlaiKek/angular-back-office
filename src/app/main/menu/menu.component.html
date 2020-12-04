@@ -1,4 +1,14 @@
 <div class="menu-container">
     <div class="logo-box"></div>
-    <ul class="menu-item-container"></ul>
+    <ul class="menu-item-container">
+        <li class="menu-item" *ngFor="let item of menuItems" [routerLink]="item.link" [routerLinkActive]="'active'">
+            <div class="icon-box">
+                <i [ngClass]="item.icon"></i>
+            </div>
+            <div class="title-box">
+                <p>{{item.title}}</p>
+            </div>
+        </li>
+        
+    </ul>
 </div>

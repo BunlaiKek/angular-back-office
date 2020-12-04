@@ -2,14 +2,26 @@
 
 @import './variables';
 
+@font-face {
+    font-family: 'Monsterrat-Regular';
+    src: url('../assets/fonts/Montserrat-Regular.ttf');
+}
+
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Monsterrat-Regular';
 }
 
 html, body {
     width: 100%;
     height: 100%;
     background-color: $defaultBgColor;
+}
+
+.page-title {
+    font-size: $pageTitleFontSize;
+    color: $defaultTextColor;
 }

@@ -1,11 +1,17 @@
 @import '../../../styles/variables';
 
+$menuItemHeight: 50px;
+$menuItemIconBoxHeight: $menuItemHeight;
+$menuItemIconBoxWidth: $menuItemIconBoxHeight;
+
 .menu-container {
     width: $defaultMenuWidth;
     height: 100%;
-    float: left;
     background-color: $defaultMenuBgColor;
-    position: relative;
+    position: absolute;
+    left: 0;
+    top: 0;
+
 
     .logo-box {
         width: 100%;
@@ -17,5 +23,68 @@
         width: 100%;
         height: calc(100% - #{$logoBoxHeight});
         position: relative;
+        list-style-type: none;
+        border: none;
+        
+
+        .menu-item {
+            width: 100%;
+            height: $menuItemHeight;
+            font-weight: bold;
+            position: relative;
+            outline: none;
+
+            .icon-box {
+                height: $menuItemIconBoxHeight;
+                width: $menuItemIconBoxWidth;
+                position: absolute;
+                left: 0;
+                top: 0;
+
+                i {
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    transform: translate(-50%, -50%);
+                    color: $defaultTextColorOnWhiteBg;
+                }
+            }
+
+            .title-box {
+                height: $menuItemHeight;
+                width: calc(100% - #{$menuItemIconBoxWidth});
+                position: absolute;
+                right: 0;
+                top: 0;
+                p {
+                    color: $defaultTextColorOnWhiteBg;
+                    line-height: $menuItemHeight;
+                }
+            }
+
+            &.active {
+
+          
+                    border-right: 2px solid $primaryColor;
+                
+                .title-box {
+                    p {
+                        color: $defaultTextColor;
+                    }
+                }
+
+                .icon-box {
+                    i {
+                        
+                        color: $primaryColor;
+                    }
+                }
+            }
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+
     }
 }

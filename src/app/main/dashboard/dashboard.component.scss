@@ -1,0 +1,46 @@
+@import '../../../styles/variables';
+
+$dashboadTopBoxColor: #F5E9EB;
+$contentBoxWidth: 80%;
+
+.dashboard-container {
+    width: 100%;
+
+    .top-box {
+        width: 100%;
+        margin-top: 35px;
+        background-color: $dashboadTopBoxColor;
+        border-radius: $defaultBorderRadius;
+        min-height: 250px;
+        padding: 20px;
+        position: relative;
+        overflow: hidden;
+
+        .content-box {
+            width: $contentBoxWidth;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            padding: 10px;
+        }
+
+        .bg-image-box {
+            width: calc(100% - #{$contentBoxWidth});
+            height: 100%;
+            position: absolute;
+            right: 0;
+            top: 0;
+
+            .image {
+                height: 90%;
+                position: absolute;
+                left: 10px;
+                bottom: 0;
+            }
+            
+        }
+
+
+    }
+}

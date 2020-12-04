@@ -1,6 +1,9 @@
 // color block
 $defaultBgColor: #F6F6FE;
 $defaultMenuBgColor: #FFFFFF;
+$defaultTextColor: #111111;
+$defaultTextColorOnWhiteBg: #ACAFAE;
+$primaryColor: #5858BA;
 
 
 
@@ -8,3 +11,9 @@ $defaultMenuBgColor: #FFFFFF;
 $defaultMenuWidth: 270px;
 $defaultMainContainerWidth: calc(100% - #{$defaultMenuWidth});
 $logoBoxHeight: 150px;
+$mainContainerPadding: 35px;
+$defaultBorderRadius: 15px;
+
+
+// font size
+$pageTitleFontSize: 1.33rem;
