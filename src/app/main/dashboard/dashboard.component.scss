@@ -2,6 +2,7 @@
 
 $dashboadTopBoxColor: #F5E9EB;
 $contentBoxWidth: 80%;
+$topBoxTitleColor: #F58C93;
 
 .dashboard-container {
     width: 100%;
@@ -22,7 +23,12 @@ $contentBoxWidth: 80%;
             position: absolute;
             left: 0;
             top: 0;
-            padding: 10px;
+            padding: 20px;
+
+            .title {
+                color: $topBoxTitleColor;
+                font-size: 1.4rem;
+            }
         }
 
         .bg-image-box {
@@ -36,11 +42,85 @@ $contentBoxWidth: 80%;
                 max-width: 80%;
                 position: absolute;
                 left: 10px;
-                bottom: 0;
+                bottom: 10px;
             }
             
         }
 
 
     }
+
+    .content {
+        width: 100%;
+        margin-top: 20px;
+        position: relative;
+
+
+        table {
+            width: 100%;
+
+            .primary {
+                color: $primaryColor;
+            }
+            
+            thead {
+                background-color: white;
+
+                tr {
+                    height: 50px;
+                    th{
+                        padding: 10px;
+                        text-align: left;
+                        &:first-child {
+                            border-top-left-radius: $defaultBorderRadius;
+                            border-bottom-left-radius: $defaultBorderRadius;
+                        }
+
+                        &:last-child {
+                            border-top-right-radius: $defaultBorderRadius;
+                            border-bottom-right-radius: $defaultBorderRadius;
+                        }
+
+                    }
+                }
+            }
+
+            tbody {
+                background-color: white;
+                tr {
+                    height: 50px;
+                    td {
+                        padding: 10px;
+                    }
+                    &:first-child {
+                        td {
+                            &:first-child {
+                                border-top-left-radius: $defaultBorderRadius;
+                            }
+                            &:last-child {
+                                border-top-right-radius: $defaultBorderRadius;
+                            }
+                        }
+                    }
+
+                    &:last-child {
+                        td {
+                            &:first-child {
+                                border-bottom-left-radius: $defaultBorderRadius;
+                            }
+                            &:last-child {
+                                border-bottom-right-radius: $defaultBorderRadius;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .table-space {
+                height: 20px;
+            }
+        }
+    }
 }
+
+
